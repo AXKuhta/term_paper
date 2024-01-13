@@ -61,14 +61,14 @@
 \defaultfontfeatures{Ligatures=TeX}
 
 % Установка шрифтов.
-\setmainfont{Times New Roman}
-\setmonofont{Courier New}
-\setsansfont{Arial}
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+\setsansfont{Liberation Sans}
 
 % Для избежания ошибки о том, что не определён шрифт для кириллических символов.
-\newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
-\newfontfamily\cyrillicfonttt{Courier New}[Script=Cyrillic]
-\newfontfamily\cyrillicfontsf{Arial}[Script=Cyrillic]
+\newfontfamily\cyrillicfont{Liberation Serif}[Script=Cyrillic]
+\newfontfamily\cyrillicfonttt{Liberation Mono}[Script=Cyrillic]
+\newfontfamily\cyrillicfontsf{Liberation Sans}[Script=Cyrillic]
 
 %---------------------------------------------------------------------------------------
 
