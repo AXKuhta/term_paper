@@ -4,7 +4,7 @@ xelatex-gost-bac/
 *.fls
 *.log
 *.out
-*.pdf
+Example.pdf
 *.gz
 *.toc
 *.xdv
