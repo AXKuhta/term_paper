@@ -60,9 +60,7 @@ columns/text/.style={string type},
 
 
 \section*{ОБОЗНАЧЕНИЯ И СОКРАЩЕНИЯ}
-ОДУ - обыкновенные дифференциальные уравнения.
-
-СЛАУ - система линейных алгебраических уравнений.
+fff
 
 %
 % ВВЕДЕНИЕ
@@ -183,89 +181,6 @@ print( np.sin(x) @ np.sin(2*x) ) # -0.01
 \end{equation}
 
 А также формулы суммы тригонометрических функций, когда, например, $\sin(x+2)$ на самом деле является $\cos(2)\sin(x) + \sin(2)\cos(x)$, или примерно $-0.416\sin(x) + 0.909\cos(x)$
-
-\subsubsection{Рисунок}
-График представлен на рисунке ниже.
-% Важно добавлять каждый рисунок в окружение gostfigure, чтобы был правильный подсчёт общего числа рисунков.
-\begin{gostfigure}
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-  \begin{axis}[domain=-3:3, width = 0.8 \textwidth, grid = both, ylabel style={rotate=-90}, xlabel = \(x\), ylabel = \(f(x)\)]
-  \addplot[mark=none, thick]{x*x + x - 2};
-  \end{axis}
-\end{tikzpicture}
-\caption{График \(f(x)\).}
-\end{figure}
-\end{gostfigure}
-
-Корни квадратного уравнения представлены в~таблице~\ref{tab:roots}.
-% Аналогично с таблицами.
-\begin{gosttable}
-\begin{table}[H]
-\centering
-\caption{Корни квадратного уравнения.}
-\label{tab:roots}
-\begin{tabular}{|c|c|}
-\hline 
-Первый корень &  Второй корень \\ 
-\hline 
-1 & -2  \\ 
-\hline 
-\end{tabular}
-\end{table}
-\end{gosttable}
-
-\subsection{Таблица из файла}
-
-Пример таблицы из файла, которую просто обновлять.
-
-\pgfplotstableread{data/sample.csv}{\loadedtable}
-
-\begin{gosttable}
-    \begin{table}[H]
-        \centering
-        \caption{Табличные данные}
-        \pgfplotstabletypeset[columns={id,num}]{\loadedtable}
-    \end{table}
-\end{gosttable}
-
-Другие столбцы.
-
-\begin{gosttable}
-  \begin{table}[H]
-      \centering
-      \caption{Табличные данные}
-      \pgfplotstabletypeset[columns={id,text}]{\loadedtable}
-  \end{table}
-\end{gosttable}
-
-\subsubsection{Таблица с разрывом страницы}
-\pgfplotstableread{data/big.csv}{\loadedtable}
-\begin{gosttable}
-  \pgfplotstabletypeset[font=\small
-  ,begin table = \begin{longtable}
-  ,end table = \end{longtable}
-  ,every head row/.append style={before  row={%
-  \caption{Таблица с разрывом}
-  \label{tab:long_table}\\
-  \hline
-  \endfirsthead
-  \caption*{Продолжение таблицы~\cref{tab:long_table}}\\
-  \hline 
-  col 1 & col 2 & col 3\\
-  \hline
-  \endhead
-  }
-  }
-  ,every first row/.append style={before row ={
-    col 1 & col 2 & col 3\\
-  \hline
-  }
-  }
-  , columns={id,num,text}
-  ]{\loadedtable}
-\end{gosttable}
 
 %
 % Практическая часть
